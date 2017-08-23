@@ -166,7 +166,7 @@ bool EsPrimo(int numero) {
 			
 		}
 		else {
-			c == c;
+			c = c;
 			
 		}
 		
@@ -231,5 +231,6 @@ int main() {
 	return 0;
 	
 }
+
 
 

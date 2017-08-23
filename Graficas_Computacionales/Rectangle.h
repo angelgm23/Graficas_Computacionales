@@ -19,4 +19,4 @@ private:
 	float _width;
 	float _height;
 
-}; #pragma once
+}; 
