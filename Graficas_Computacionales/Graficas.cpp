@@ -7,3 +7,15 @@ int main()
 
 	return 0;
 }
+
+/***********************************************
+Materia: Graficas Computacionales
+
+Fecha: 16 de Agosto del 2017
+
+Autor: A01376132 Angel Geney Moreno Morales
+************************************************/
+
+
+
+
