@@ -184,7 +184,7 @@ bool EsPrimo(int numero) {
 	
 }
 
-int main() {
+ 
 	//1-
 	int p = PerimetroRectangulo(5, 3);
 	std::cout << "El perimetro es " << p << std::endl; std::cin.get();
