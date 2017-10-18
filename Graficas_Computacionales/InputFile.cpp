@@ -5,40 +5,36 @@ Fecha: 06 de Septiembre del 2017
 
 Autor: Angel Geney Moreno Morales
 ****************************************/
-#include<fstream>
-#include <string>
-#include<iostream>
-#include<sstream>
 #include "InputFile.h"
 
-bool InputFile::Read(std::string filename) 
-{
-	std::ifstream fl; std::stringstream alpha;
-	fl.open("Prueba.txt", std::ios::in);
-	if (fl.fail()) {
-		std::cout<< "No se abrió" << std::endl;
+#include <fstream>
+ #include <iostream>
+ #include <sstream>
+
+bool InputFile::Read(std::string filename)
+ {
+	if (filename.empty())
+		 {
+		std::cout << "No filename provided" << std::endl;
 		return false;
-	}
-	else
-	{
-
-		while (!fl.eof()) 
-		{
-			getline(fl, filename); alpha.str(filename + '\n');
-			_contents() = alpha.str();
-
-
 		}
-
-
+	
+		std::fstream inputFile(filename, std::fstream::in);
+	
+		if (!inputFile.is_open())
+		 {
+		std::cout << "Could not open file " << filename << std::endl;
+		return false;
+		}
+	
+		std::stringstream ss;
+	ss << inputFile.rdbuf();
+	_contents = ss.str();
+	
+		return true;
 	}
-	fl.close();
-}
 
-
-
-std::string InputFile::GetContents(){
-
-	return _contents();
-
-}
+std::string InputFile::GetContents()
+ {
+	return _contents;
+	}
