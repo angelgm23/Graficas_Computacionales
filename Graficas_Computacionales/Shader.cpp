@@ -3,7 +3,7 @@
 
 
 
-Shader::Shader() {
+ Shader::Shader() {
 	_shaderHandle = 0;
 
 }
@@ -33,3 +33,4 @@ Shader::~Shader() {
 	}
 	GLuint Shader::GetHandle() {
 		return _shaderHandle;
+	}
