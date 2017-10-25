@@ -13,9 +13,9 @@ public:
 	void CreateMesh(GLint vertexCount);
 	void Draw(GLenum primitive);
 	void SetPositionAttribute(std::vector<glm::vec2> positions, GLenum usage, GLuint locationIndex);
-	void SetPositionAttribute(std::vector<glm::vec3> positions, GLenum usage, GLuint locationIndec);
-	void SetColorAttribute (std::vector<glm::vec3> colors, GLenum usage, GLuint locationIndec); 
-	void SetColorAttribute(std::vector<glm::vec4> colors, GLenum usage, GLuint locationIndec);
+	void SetPositionAttribute(std::vector<glm::vec3> positions, GLenum usage, GLuint locationIndex);
+	void SetColorAttribute (std::vector<glm::vec3> colors, GLenum usage, GLuint locationIndex); 
+	void SetColorAttribute(std::vector<glm::vec4> colors, GLenum usage, GLuint locationIndex);
 
 
 private:

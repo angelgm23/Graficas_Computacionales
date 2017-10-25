@@ -51,28 +51,14 @@ void Mesh::SetAttributeData(
 
 	glBindVertexArray(_vertexArrayObject);
 
-	glGenBuffers(1, &_positionsVertexBufferObject)
+	glGenBuffers(1, &_positionsVertexBufferObject);
 
 	glBindBuffer(GL_ARRAY_BUFFER, buffer);
 	glBufferData(GL_ARRAY_BUFFER, size, data, usage);
 	glEnableVertexAttribArray(locationIndex);
 	glVertexAttribPointer(locationIndex, components, GL_FLOAT, GL_FALSE, 0, nullptr);
-	glBindBuffer (GL_ARRAY)
-	
-	
-		
-		
-		
-		
-		
-		
-		glBufferData(GL_ARRAY_BUFFER, sizeof(glm::vec2)* positions.size(),
-		positions.data(), GL_STATIC_DRAW);
-	//Quiero activar el atributo con indice 0 en la tarjeta de video.
-	glEnableVertexAttribArray(0);
-	//Configuramos el atributo con indice 0 en la tarjeta de video.
-	glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, 0, nullptr);
-	//Desactivamos el uso del VBO de posiciones.
 	glBindBuffer(GL_ARRAY_BUFFER, 0);
+	
+	glBindVertexArray(0);
 
 }
