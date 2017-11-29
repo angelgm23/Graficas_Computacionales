@@ -26,6 +26,6 @@ vec3 V= (_CameraPosition- _PixelPosition);
 V= normalize(V);
 vec3 _specular= 0.5f * pow (dot(V, R),32)* _LightColor;
 vec3 _phong= (_ambient + _diffuse + _specular) * InterpolatedColor;
-FragColor= vec4(_phong, 1.0f) *mix( texture2D(DiffuseTexture, InterpolatedTexCoord), texture2D( s2, InterpolatedTexCoord),0.5f);
+FragColor= vec4(_phong, 1.0f) * mix( texture2D(DiffuseTexture, InterpolatedTexCoord), texture2D( s2, InterpolatedTexCoord),0.5f);
 
 }

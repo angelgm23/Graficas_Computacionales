@@ -12,9 +12,9 @@ void Texture2D::LoadTexture(std::string path) {
 
 	ilGenImages(1, &imageID);
 	ilBindImage(imageID);
-	ilLoadImage("Madera.jpg");
+	ilLoadImage(path.c_str());
 	
-	//ilLoadImage(path.c_str());
+	
 
 
 	glGenTextures(1, &textureID);
